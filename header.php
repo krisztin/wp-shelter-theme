@@ -54,9 +54,11 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
-			</div>
-		<div class="custom-header-media">
-	<?php the_custom_header_markup(); ?>
+		</div>
+			<?php if (is_front_page()) : ?>
+				<div class="custom-header-media">
+				<?php the_custom_header_markup(); ?>
+			<?php endif; ?>
 </div>
 	</header><!-- #masthead -->
 
