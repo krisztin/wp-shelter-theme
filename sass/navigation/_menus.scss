@@ -24,6 +24,9 @@
 		&:hover {
 			background: $colour_main;
 			color: $colour_white;
+			&:visited {
+				color: $colour_white;
+			}
 		}
 	}
 	.current_page_item>a,
@@ -64,10 +67,11 @@
 	}
 	.main-navigation {
 		padding: 26px 0;
-		@include clearfix;
 		a {
 			margin: 0 $font__size;
-			float: left;
+		}
+		li {
+			display: inline-block;
 		}
 	}
 	li.nav-search {
@@ -81,14 +85,14 @@
 			display: none;
 		}
 	}
-	.menu-item-44 {
+	.menu-item-44 { //donate
 		a {
 			background: $colour_bright;
 			@include cta-lightbg;
 		}
 	}
-	.navbar-container {
-		display: inline-flex;
+	.site-branding {
+		float: left;
 	}
 }
 
