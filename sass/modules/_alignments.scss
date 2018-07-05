@@ -14,8 +14,3 @@
 	clear: both;
 	@include center-block;
 }
-
-article {
-	@include site-width;
-	padding: 1em;
-}

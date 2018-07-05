@@ -1,5 +1,4 @@
 .main-navigation {
-	@include site-width;
 	@include font-size(1.2);
 	ul {
 		display: none;
