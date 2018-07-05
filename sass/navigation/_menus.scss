@@ -1,0 +1,124 @@
+.main-navigation {
+	@include site-width;
+	@include font-size(1.2);
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		ul {
+			position: absolute;
+			right: 0;
+			top: 0;
+			ul {
+				left: -999em;
+				top: 0;
+			}
+		}
+	}
+	a {
+		padding: 8px;
+		display: block;
+		text-decoration: none;
+		font-weight: bold;
+		&:hover {
+			background: $colour_main;
+			color: $colour_white;
+		}
+	}
+	.current_page_item>a,
+	.current-menu-item>a,
+	.current_page_ancestor>a,
+	.current-menu-ancestor>a {
+		color: $colour_med;
+	}
+}
+
+.navbar-container {
+	position: relative;
+}
+
+/* Small menu. */
+
+.menu-toggle {
+	position: absolute;
+	top: $font__size;
+	right: $font__size;
+	background-color: $colour_main;
+	color: $colour_white;
+	@include font-size(1.5);
+	text-align: center;
+}
+
+.main-navigation.toggled ul {
+	display: block;
+	text-align: center;
+}
+
+@media screen and (min-width: 55em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: inline;
+	}
+	.main-navigation {
+		padding: 26px 0;
+		@include clearfix;
+		a {
+			margin: 0 $font__size;
+			float: left;
+		}
+	}
+	li.nav-search {
+		float: right;
+		padding: 6px;
+		input[type="search"] {
+			border: none;
+			border-bottom: 2px solid $colour_med;
+		}
+		input[type="submit"] {
+			display: none;
+		}
+	}
+	.menu-item-44 {
+		a {
+			background: $colour_bright;
+			@include cta-lightbg;
+		}
+	}
+	.navbar-container {
+		display: inline-flex;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+// nav search
+li.nav-search {
+	display: block;
+	input[type="search"] {
+		border-radius: 0;
+		border: 2px solid $colour_main;
+		width: 100%;
+	}
+	input[type="submit"] {
+		display: none;
+	}
+}

@@ -1,0 +1,45 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+// Width of content
+@mixin site-width() {
+	max-width: 970px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+// cta on white/light bg
+
+@mixin cta-lightbg {
+	-webkit-box-shadow: 5px 5px 0px 2px rgba(4,107,153,1);
+	-moz-box-shadow: 5px 5px 0px 2px rgba(4,107,153,1);
+	box-shadow: 5px 5px 0px 2px rgba(4,107,153,1);
+	color: $colour_main;
+}
