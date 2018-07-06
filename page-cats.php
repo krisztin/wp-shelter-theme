@@ -5,8 +5,8 @@
 ?>
 <?php get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div id="primary" class="content-area no-sidebar">
+		<main id="main" class="site-main no-sidebar">
 
 		<?php
 		while ( have_posts() ) :
