@@ -2,6 +2,11 @@ html {
 	box-sizing: border-box;
 }
 
+html,
+body {
+	height: 100%; // fixed footer with flex
+}
+
 *,
 *:before,
 *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
@@ -10,6 +15,17 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	// fixed footer with flex
+	display: flex;
+	flex-direction: column; 
+}
+
+.site-content {
+	flex: 1 0 auto; 	// fixed footer with flex
+}
+
+footer {
+	flex-shrink: 0; // fixed footer with flex
 }
 
 hr {
