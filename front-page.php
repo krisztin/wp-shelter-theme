@@ -30,34 +30,33 @@ get_header();
 		endif;
 		?>
     <section>
-      <div class="container-full">
       <div class="flex">
-        <article class="flex-item cta">
-          <h1 class="pop">Adopt</h1>
-          <p>Cough hairball on conveniently placed pants.</p>
+        <article class="flex-item cta-card">
+          <a href="/wpersonal/cats">
+            <img src="/wpersonal/wp-content/themes/charity_shelter/assets/img/adopt.svg" class="cat-icon">
+            <h1 class="pop">Adopt</h1>
+            <p>Cough hairball on conveniently placed pants.</p>
+          </a>
         </article>
-      
-      <div class="flex">
-        <article class="flex-item cta">
-          <h1 class="pop">Donate</h1>
-          <p>Cough hairball on conveniently placed pants.</p>
+        <article class="flex-item cta-card">
+          <div class="flex">
+            <a href="/wpersonal/support-us/donate">
+              <img src="/wpersonal/wp-content/themes/charity_shelter/assets/img/donate.svg" class="cat-icon">
+              <h1 class="pop">Donate</h1>
+              <p>Cough hairball on conveniently placed pants.</p>
+            </a>
+        </article>
+        <article class="flex-item cta-card">
+          <a href="/wpersonal/support-us/volunteer">
+            <img src="/wpersonal/wp-content/themes/charity_shelter/assets/img/volunteer.svg" class="cat-icon">
+            <h1 class="pop">Volunteer</h1>
+            <p>Cough hairball on conveniently placed pants.</p>
+          </a>
         </article>
       </div>
-      <div class="flex">
-        <article class="flex-item cta">
-          <h1 class="pop">Volunteer</h1>
-          <p>Cough hairball on conveniently placed pants.</p>
-        </article>
-      </div>
-    </div>
     </section>
     
-    <section class="flex">
-      <h1 class="flex-item">Featured Cat</h1>
-        <article class="flex-item">
-
-      </article>
-    </section>
+  <?php get_template_part( 'template-parts/content' , 'featured' ); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
