@@ -22,26 +22,7 @@ get_header();
 					<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'charity_shelter' ); ?></p>
 					<h2 class="pop">Maybe you were looking for me?</h2>
 				
-					<?php
-					$args = array(
-						'post_type' => 'cats',
-						'meta_key' => 'featured',
-						'meta_value' => '1'
-					);
-
-					$query = new WP_Query($args);
-
-					while ( $query->have_posts() ) : $query->the_post(); ?>
-						<section>
-							<a href="<?php the_permalink(); ?>">
-								<h1><?php the_title(); ?></h1>
-								<p><?php the_field( 'featured_excerpt'); ?></p>
-								<?php the_post_thumbnail(); ?>
-							</a>
-						</section>
-				<?php endwhile;
-				wp_reset_query();
-				?>					
+					<?php get_template_part( 'template-parts/content', 'featured' ); ?>					
 				<p>Or search the site for what you're looking for.</p><?php
 					get_search_form(); ?>
 				</div><!-- .page-content -->
