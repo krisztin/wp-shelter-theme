@@ -59,18 +59,21 @@ button {
   background: $colour_med;
 }
 
-.btn-primary,
-.btn-secondary:hover,
-.btn-text:hover,
-.btn-primary:hover,
 .btn.btn-secondary.inverted,
 .btn.btn-text.inverted,
-.btn.btn-text.inverted:hover,
-.btn.btn-secondary.inverted:hover,
+.btn-primary {
+	color: $colour_white;
+ &:hover, &:visited {
+	color: $colour_white;
+ }
+}
+
+.btn-secondary:hover,
+.btn-text:hover,
 .btn.btn-primary.inverted:hover,
+.btn.btn-primary.inverted:active 
 .btn.btn-text.inverted:active,
-.btn.btn-secondary.inverted:active,
-.btn.btn-primary.inverted:active {
+.btn.btn-secondary.inverted:active {
   color: $colour_white;
 }
 
