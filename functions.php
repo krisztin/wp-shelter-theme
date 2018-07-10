@@ -113,6 +113,8 @@ add_action( 'widgets_init', 'charity_shelter_widgets_init' );
  * Enqueue scripts and styles.
  */
 function charity_shelter_scripts() {
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:300,500,500i,700,900' );
+
 	wp_enqueue_style( 'charity_shelter-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'charity_shelter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
