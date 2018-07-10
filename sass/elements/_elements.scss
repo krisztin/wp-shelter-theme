@@ -46,17 +46,4 @@ figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
-.cats {
-	position: relative;
-}
-
-.cat-name {
-	background: $colour_main;
-	color: $colour_white;
-	padding: 5px;
-	position: absolute;
-	top: -10px;
-	left: 2px;
-}
-
 @import "tables";
