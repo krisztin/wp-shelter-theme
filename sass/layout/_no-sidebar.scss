@@ -16,39 +16,3 @@
 	margin: 0 auto;
 	padding: 0 10px;
 }
-
-.flex {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	max-width: 100%;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-}
-
-.flex-item {
-	display: inline;
-	min-width: 310px;
-	-webkit-box-flex: 1;
-		-ms-flex: 1;
-				flex: 1;
-				padding: 5px;
-			}
-			
-.cta-card {
-	text-align: center;
-	min-width: 100px;
-	max-width: 200px;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	padding: $font__size;
-	margin: 5px;
-	p, h1 {
-		margin: 5px;
-	}
-	a {
-		text-decoration: none;
-	}
-}
