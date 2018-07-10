@@ -34,7 +34,7 @@ get_header();
         <article class="flex-item cta-card">
           <a href="/wpersonal/cats">
             <img src="/wpersonal/wp-content/themes/charity_shelter/assets/img/adopt.svg" class="cat-icon">
-            <h1 class="pop">Adopt</h1>
+            <h1>Adopt</h1>
             <p>Cough hairball on conveniently placed pants.</p>
           </a>
         </article>
@@ -42,14 +42,14 @@ get_header();
           <div class="flex">
             <a href="/wpersonal/support-us/donate">
               <img src="/wpersonal/wp-content/themes/charity_shelter/assets/img/donate.svg" class="cat-icon">
-              <h1 class="pop">Donate</h1>
+              <h1>Donate</h1>
               <p>Cough hairball on conveniently placed pants.</p>
             </a>
         </article>
         <article class="flex-item cta-card">
           <a href="/wpersonal/support-us/volunteer">
             <img src="/wpersonal/wp-content/themes/charity_shelter/assets/img/volunteer.svg" class="cat-icon">
-            <h1 class="pop">Volunteer</h1>
+            <h1>Volunteer</h1>
             <p>Cough hairball on conveniently placed pants.</p>
           </a>
         </article>
