@@ -17,3 +17,80 @@ a {
 		outline: 0;
 	}
 }
+
+button {
+	@include button-strip;
+}
+
+.btn {
+	@include button-default;
+}
+
+.btn-primary,
+.btn-secondary:hover,
+.btn-text:hover,
+.btn-primary:hover {
+  background: $colour_main;
+}
+
+.btn-secondary,
+.btn-text {
+  color: $colour_main;
+}
+
+.btn-secondary {
+  border: 2px solid $colour_main;
+  padding: 14px; /*will need to calc this */
+}
+
+.btn-primary:hover {
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.btn-secondary:hover,
+.btn-text:hover,
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.btn-text:active {
+  background: $colour_med;
+}
+
+.btn-primary,
+.btn-secondary:hover,
+.btn-text:hover,
+.btn-primary:hover,
+.btn.btn-secondary.inverted,
+.btn.btn-text.inverted,
+.btn.btn-text.inverted:hover,
+.btn.btn-secondary.inverted:hover,
+.btn.btn-primary.inverted:hover,
+.btn.btn-text.inverted:active,
+.btn.btn-secondary.inverted:active,
+.btn.btn-primary.inverted:active {
+  color: $colour_white;
+}
+
+.btn.btn-secondary.inverted {
+  border: 2px solid $colour_white;
+}
+
+.btn.btn-primary.inverted {
+  background: $colour_white;
+  color: $colour_main;
+}
+
+.btn.btn-text.inverted:hover,
+.btn.btn-secondary.inverted:hover,
+.btn.btn-primary.inverted:hover {
+  background: $colour_bright;
+}
+
+.btn.btn-text.inverted:active,
+.btn.btn-secondary.inverted:active,
+.btn.btn-primary.inverted:active {
+  background: $colour_pop;
+}
