@@ -62,12 +62,36 @@
   letter-spacing: .1em;
   min-width: 64px;
   padding: $font__size;
-  margin: ($font__size / 2) $font__size;
+  margin: ($font__size / 2) 0;
   border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   font-weight: 900;
+}
+
+@mixin button-text {
+	padding: $font__size / 3 ;
+	display: inline-block;
+	@include font-size(1.2);
+	letter-spacing: .1em;
+	margin: 0 $font__size;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 900;
+	border-bottom: 5px solid transparent;
+	&:hover {
+		color: $colour_main;
+		border-bottom: 5px solid $colour_main;
+	}
+	&:visited {
+		color: $colour_main;
+	}
+	&:active {
+		color: $colour_med;
+		border-bottom: 5px solid $colour_med;
+	}
 }
 
 @mixin button-strip {

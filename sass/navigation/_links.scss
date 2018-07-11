@@ -26,15 +26,17 @@ button {
 	@include button-default;
 }
 
+.btn-text {
+	@include button-text;
+}
+
 .btn-primary,
 .btn-secondary:hover,
-.btn-text:hover,
 .btn-primary:hover {
   background: $colour_main;
 }
 
-.btn-secondary,
-.btn-text {
+.btn-secondary {
   color: $colour_main;
 }
 
@@ -48,14 +50,12 @@ button {
 }
 
 .btn-secondary:hover,
-.btn-text:hover,
 .btn-primary:hover {
   opacity: 0.9;
 }
 
 .btn-primary:active,
-.btn-secondary:active,
-.btn-text:active {
+.btn-secondary:active {
   background: $colour_med;
 }
 
@@ -69,7 +69,6 @@ button {
 }
 
 .btn-secondary:hover,
-.btn-text:hover,
 .btn.btn-primary.inverted:hover,
 .btn.btn-primary.inverted:active 
 .btn.btn-text.inverted:active,

@@ -1,5 +1,4 @@
 .main-navigation {
-	@include font-size(1.2);
 	ul {
 		display: none;
 		list-style: none;
@@ -16,17 +15,7 @@
 		}
 	}
 	a {
-		padding: 8px;
-		display: block;
-		text-decoration: none;
-		font-weight: bold;
-		&:hover {
-			background: $colour_main;
-			color: $colour_white;
-			&:visited {
-				color: $colour_white;
-			}
-		}
+
 	}
 	.current_page_item>a,
 	.current-menu-item>a,
@@ -57,17 +46,18 @@
 	text-align: center;
 }
 
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 40em) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: inline;
+		text-align: left;
 	}
 	.main-navigation {
 		padding: 26px 0;
 		a {
-			margin: 0 $font__size;
+			@include button-text;
 		}
 		li {
 			display: inline-block;
@@ -82,12 +72,6 @@
 		}
 		input[type="submit"] {
 			display: none;
-		}
-	}
-	.menu-item-44 { //donate
-		a {
-			background: $colour_bright;
-			@include cta-lightbg;
 		}
 	}
 	.site-branding {
