@@ -22,7 +22,7 @@
 				<h3>How about children? <?php the_field('children'); ?></h3>
 			</article>
 			<article>
-				<h2>About <?php the_title(); ?></h2>
+				<h2><i class="fas fa-clipboard-list"></i> About <?php the_title(); ?></h2>
 				<?php the_field('about'); ?>
 			</article>
 		<!-- medical conditional displayed when cat has medical notes/conditions-->
@@ -30,7 +30,7 @@
 				$medical = get_field('medical');
 				if( !empty($medical)) : ?>
 					<article>
-						<h2>Medical Notes</h2>
+						<h2><i class="fas fa-notes-medical"></i> Medical Notes</h2>
 					<?php the_field('medical'); ?>
 					</article>
 				<?php endif; ?>
