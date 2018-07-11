@@ -41,7 +41,7 @@
 					<article class="bg-colour-pop">
 						<p>Could you give <?php the_title();?> a temporary home? He is not doing well in our cattery and could use a break from all the other cats (and us).</p>
 						<a href="#" class="btn btn-primary aligncenter">Foster <?php the_title(); ?></a>
-			</article>
+					</article>
 				<?php endif; ?>
 	<!-- end of cat metadata -->
 	<!-- custom field images loop -->
@@ -62,5 +62,4 @@ if( !empty($image) ) { ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer(); ?>
