@@ -25,7 +25,25 @@
 				<h2>About <?php the_title(); ?></h2>
 				<?php the_field('about'); ?>
 			</article>
+		<!-- medical conditional displayed when cat has medical notes/conditions-->
+			<?php
+				$medical = get_field('medical');
+				if( !empty($medical)) : ?>
+					<article>
+						<h2>Medical Notes</h2>
+					<?php the_field('medical'); ?>
+					</article>
+				<?php endif; ?>
+		<!-- fostering conditional displayed if cat needs a foster home-->
+			<?php
+				$foster = get_field('foster');
+				if( !empty($foster)) : ?>
+					<article class="bg-colour-pop">
+						<p>Could you give <?php the_title();?> a temporary home? He is not doing well in our cattery and could use a break from all the other cats (and us).</p>
+						<a href="#" class="btn btn-primary aligncenter">Foster <?php the_title(); ?></a>
 			</article>
+				<?php endif; ?>
+	<!-- end of cat metadata -->
 		<?php endwhile; // End of the loop.
 		?>
 		</main><!-- #main -->
