@@ -31,27 +31,20 @@ get_header();
 		?>
     <section>
       <div class="flex">
-        <article class="flex-item cta-card">
-          <a href="/wpersonal/cats">
+        <article class="flex-item cta-card card">
             <img src="/wpersonal/wp-content/themes/charity_shelter/assets/img/adopt.svg" class="cat-icon">
-            <h1>Adopt</h1>
+            <a href="/wpersonal/cats" class="btn btn-secondary">Adopt</a>
             <p>Cough hairball on conveniently placed pants.</p>
-          </a>
         </article>
-        <article class="flex-item cta-card">
-          <div class="flex">
-            <a href="/wpersonal/support-us/donate">
+        <article class="flex-item cta-card card">
               <img src="/wpersonal/wp-content/themes/charity_shelter/assets/img/donate.svg" class="cat-icon">
-              <h1>Donate</h1>
+              <a href="/wpersonal/support-us/donate" class="btn btn-secondary">Donate</a>
               <p>Cough hairball on conveniently placed pants.</p>
-            </a>
         </article>
-        <article class="flex-item cta-card">
-          <a href="/wpersonal/support-us/volunteer">
+        <article class="flex-item cta-card card">
             <img src="/wpersonal/wp-content/themes/charity_shelter/assets/img/volunteer.svg" class="cat-icon">
-            <h1>Volunteer</h1>
-            <p>Cough hairball on conveniently placed pants.</p>
-          </a>
+            <a href="/wpersonal/support-us/volunteer" class="btn btn-secondary">Volunteer</a>
+            <p>Cough hairball on conveniently conveniently placed pants.</p>
         </article>
       </div>
     </section>
