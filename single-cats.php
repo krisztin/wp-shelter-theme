@@ -13,9 +13,14 @@
 			<section class="container-wide">
 			<?php the_post_thumbnail(); ?>
 			</section>
-			<article class="cat-info container-full">
-				<h3>Age: <?php the_field('cat_age'); ?></h3>
-				<h3>Can live with dogs? <?php the_field('likes_dogs'); ?></h3>
+	<!-- cat metadata -->
+			<article class="cat-info">
+				<h3>Age: <?php the_field('age'); ?></h3>
+				<h3>Sex: <?php the_field('sex'); ?></h3>
+				<h3>Likes dogs? <?php the_field('likes_dogs'); ?></h3>
+				<h3>Likes cats? <?php the_field('likes_cats'); ?></h3>
+				<h3>How about children? <?php the_field('children'); ?></h3>
+			</article>
 			</article>
 		<?php endwhile; // End of the loop.
 		?>
