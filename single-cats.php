@@ -39,21 +39,43 @@
 				$foster = get_field('foster');
 				if( !empty($foster)) : ?>
 					<article class="bg-colour-pop">
+						<img class="cat-icon" src="/wpersonal/wp-content/themes/charity_shelter/assets/img/foster.svg">
 						<p>Could you give <?php the_title();?> a temporary home? He is not doing well in our cattery and could use a break from all the other cats (and us).</p>
 						<a href="#" class="btn btn-primary aligncenter">Foster <?php the_title(); ?></a>
 					</article>
 				<?php endif; ?>
 	<!-- end of cat metadata -->
-	<!-- custom field images loop -->
+
+<!-- custom field images loop -->
 <?php
-for ($x = 1; $x <= 8; $x++ ) {
+	for ($x = 1; $x <= 2; $x++ ) {
 
-$image = get_field("image_{$x}");
+	$image = get_field("image_{$x}");
 
-if( !empty($image) ) { ?>
-	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-<?php }
- }  ?>
+	if( !empty($image) ) { ?>
+		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+	<?php }
+	} ?>
+ 
+	<!-- CTA to buy food for cat -->
+		<article class="bg-colour-bright">
+			<img class="cat-icon" src="/wpersonal/wp-content/themes/charity_shelter/assets/img/food.svg">
+			<h1>Buy <?php the_title();?> some food</h1>
+			<a href="#" class="btn btn-primary aligncenter">1 Day for £5</a>
+			<a href="#" class="btn btn-primary aligncenter">1 Week for £35</a>
+			<a href="#" class="btn btn-primary aligncenter">1 Month for £150</a>
+		</article>
+		
+<?php
+	for ($x = 3; $x <= 10; $x++ ) {
+	$image = get_field("image_{$x}");
+
+	if( !empty($image) ) { ?>
+		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+	<?php }
+		}
+ 
+ ?>
 	<!-- end of custom field images -->
 
 		<?php endwhile; // End of the loop.
