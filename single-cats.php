@@ -44,6 +44,18 @@
 			</article>
 				<?php endif; ?>
 	<!-- end of cat metadata -->
+	<!-- custom field images loop -->
+<?php
+for ($x = 1; $x <= 8; $x++ ) {
+
+$image = get_field("image_{$x}");
+
+if( !empty($image) ) { ?>
+	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+<?php }
+ }  ?>
+	<!-- end of custom field images -->
+
 		<?php endwhile; // End of the loop.
 		?>
 		</main><!-- #main -->
