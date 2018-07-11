@@ -10,12 +10,17 @@ Built on _s, a very barebones Wordpress starter theme.
 * Create functions i.e. adding thumbnail support, adding a custom post type.
 * Create a custom post type.
 * Renaming a menu item and post type in the backend (Posts -> News).
+* Displaying a specific (custom) post/page with a specific custom field value using WP_Query
+* Inserting an item within looped posts at a set place.
+* Material design system (only the theory, will use the code in a future project for sure)
 
 ## Resources
 
 [Wordpress Codex Functions Reference](https://codex.wordpress.org/Function_Reference)
 
 [Wordpress Hierarchy](https://wphierarchy.com/)
+
+[Material Design](https://material.io/)
 
 Google, lots and lots of Google
 
