@@ -117,6 +117,8 @@ function charity_shelter_scripts() {
 
 	wp_enqueue_style( 'charity_shelter-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'fontawesome' , 'https://use.fontawesome.com/releases/v5.1.0/css/all.css');
+
 	wp_enqueue_script( 'charity_shelter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'charity_shelter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
