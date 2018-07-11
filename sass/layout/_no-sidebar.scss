@@ -10,9 +10,17 @@
 	}
 }
 
-.container-full {
-	max-width: 1000px;
+.container-full,
+.container-wide {
 	width: 100%;
 	margin: 0 auto;
+}
+
+.container-full{
+	max-width: 1000px;
 	padding: 0 10px;
+}
+
+.container-wide {
+	max-width: 1500px;
 }
