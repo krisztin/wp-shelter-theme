@@ -21,6 +21,10 @@
 				<h3>Likes cats? <?php the_field('likes_cats'); ?></h3>
 				<h3>How about children? <?php the_field('children'); ?></h3>
 			</article>
+			<article>
+				<h2>About <?php the_title(); ?></h2>
+				<?php the_field('about'); ?>
+			</article>
 			</article>
 		<?php endwhile; // End of the loop.
 		?>
