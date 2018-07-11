@@ -96,8 +96,8 @@ add_action( 'after_setup_theme', 'charity_shelter_content_width', 0 );
  */
 function charity_shelter_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'sidebar' , 'charity_shelter' ),
-		'id'            => sidebar,
+		'name'          => esc_html__( 'sidebar-1' , 'charity_shelter' ),
+		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'charity_shelter' ),
 		'before_widget' => `<section class="widget">`,
 		'after_widget'  => '</section>',
