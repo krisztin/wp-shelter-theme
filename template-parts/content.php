@@ -23,7 +23,6 @@
 			<div class="entry-meta">
 				<?php
 				charity_shelter_posted_on();
-				charity_shelter_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -33,7 +32,7 @@
 
 	<div class="entry-content">
 		<?php
-		the_content( sprintf(
+		the_excerpt( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
 				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'charity_shelter' ),
