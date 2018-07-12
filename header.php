@@ -26,27 +26,13 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'charity_shelter' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="navbar-container container-full">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$charity_shelter_description = get_bloginfo( 'description', 'display' );
-			if ( $charity_shelter_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $charity_shelter_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '☰', 'charity_shelter' ); ?></button>
+		<div class="container-wide nav-flex">
+			<div class="site-branding container-text nav-flex-disp">
+				<?php	the_custom_logo(); ?>
+				<h1><?php bloginfo( 'name' ); ?></h1>
+			</div><!-- .site-branding -->
+			<nav id="site-navigation" class="main-navigation nav-flex-menu">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
