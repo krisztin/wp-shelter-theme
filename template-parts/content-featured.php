@@ -8,7 +8,7 @@
   $query = new WP_Query($args);
 
   while ( $query->have_posts() ) : $query->the_post(); ?>
-    <section class="container-wide">
+    <section class="container container-full">
       <article class="flex">
         <div class="container-text bg-colour-main flex-item feature">
           <h3><i class="fas fa-star fa-sm"></i> Featured cat</h3>
@@ -21,7 +21,7 @@
           Check out <?php the_title(); ?>
           </a>
         </div>
-          <?php the_post_thumbnail( 'large', ['class' => 'flex-item'] ); ?>
+          <?php the_post_thumbnail( 'large', ['class' => 'flex-item feature'] ); ?>
       </article>
     </section>
   <?php endwhile;

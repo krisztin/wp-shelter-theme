@@ -71,8 +71,10 @@
 	.container-text {
 		max-width: 500px;
 	}
-	img {
+	img.feature {
 		object-fit: cover;
+		flex: 2;
+		min-width: 400px;
 	}
 }
 
@@ -95,6 +97,7 @@
 
 .feature {
 	min-width: 310px;
+	margin: 0px;
 }
 
 .card {	
