@@ -30,7 +30,7 @@ get_header();
 		endif;
 		?>
     <section>
-      <div class="flex">
+      <div class="flex container">
         <article class="flex-item cta-card card">
             <img src="/wpersonal/wp-content/themes/charity_shelter/assets/img/adopt.svg" class="cat-icon">
             <a href="/wpersonal/cats" class="btn btn-secondary">Adopt</a>

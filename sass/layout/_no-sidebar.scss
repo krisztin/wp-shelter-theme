@@ -10,6 +10,11 @@
 	}
 }
 
+.container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
 .container-full,
 .container-wide {
 	width: 100%;
@@ -18,7 +23,8 @@
 
 .container-full{
 	max-width: 1000px;
-	padding: 0 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .container-wide {

@@ -8,6 +8,7 @@
 	<div id="primary" class="content-area no-sidebar">
 		<main id="main" class="site-main no-sidebar">
     <section class="bg-colour-main pad">
+      <img class="cat-icon" src="/wpersonal/wp-content/themes/charity_shelter/assets/img/cats.svg">
       <?php
         while ( have_posts() ) :
           the_post();
@@ -16,10 +17,9 @@
           
         endwhile; // End of the loop.
         ?>
-        <img class="cat-icon" src="/wpersonal/wp-content/themes/charity_shelter/assets/img/cats.svg">
         </section>
-<section class="extra-pad">
-  <div class="container-full">
+<section>
+  <div class="container-full container">
     <header><h3 class="inline">Filters</h3>
     <p class="inline">placeholder for either custom field or taxonomy based filters</p>
     </header>
@@ -35,7 +35,7 @@ $query = new WP_Query ( $args );
 ?>
 
 <!-- Kittiez! -->
-<section class="cat-listing flex">
+<section class="cat-listing flex container">
   <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class( 'flex-item card' ); ?>>
     <div class="cat-img">
@@ -71,7 +71,7 @@ $query = new WP_Query ( $args );
       <header>
         <p>Can't find the cat your are looking for?</p>
         <h1 id="signUpA11y">Sign up to our cat alerts!</h1>
-        <img class="cat-icon" src="/wpersonal/wp-content/themes/charity_shelter/assets/img/alert.svg">
+        <img class="cat-icon" src="/wpersonal/wp-content/themes/charity_shelter/assets/img/alert_sherlock.svg">
       </header>
     <form>
       <input id="email" type="email" placeholder="Email">
