@@ -1,5 +1,5 @@
 
-# My very first Wordpress theme (it shows)
+# My very first Wordpress theme _(it shows)_
 
 Built on _s, a very barebones Wordpress starter theme.
 
@@ -7,12 +7,25 @@ Built on _s, a very barebones Wordpress starter theme.
 
 * Setting up a project with automatic Sass build (with npm and node-sass)
 * Handle permission errors otherwise known as '777 is your last hope'.
-* Create functions i.e. adding thumbnail support, adding a custom post type.
-* Create a custom post type.
+* Create functions i.e. adding thumbnail support, a custom post type, scripts and stylesheets (Google fonts and Font Awesome).
+* Create a custom post type (Cats).
 * Renaming a menu item and post type in the backend (Posts -> News).
-* Displaying a specific (custom) post/page with a specific custom field value using WP_Query
-* Inserting an item within looped posts at a set place.
-* Material design system (only the theory, will use the code in a future project for sure)
+* Using WP_Query to display a specific (custom) post/page with a specific custom field value (featured cat template-part)
+* Also, creating and adding a template-part
+* Inserting an item within looped posts at a set place. (CTAs on page-cats)
+* Material design system (only the theory and inspiration for buttons but will definitely use the code/elements in a future project).
+
+## Still to come
+
+* Pages: Donate, News, Foster, Volunteer, Events, Contact
+* Filters: I'll probably use taxonomies and categories to filter cats, news, volunteer and other listing pages. Custom fields are also an option
+
+## Nice to haves aka massive projects to be done
+
+* Stripe integration with all the hooks, actions, bells and whilstles.
+* System for recurring donations (GoCardless?).
+* Shop (virtual shop for virtual gifts that could be bought for a cat).
+* Google Tag Manager integration.
 
 ## Resources
 
@@ -21,6 +34,8 @@ Built on _s, a very barebones Wordpress starter theme.
 [Wordpress Hierarchy](https://wphierarchy.com/)
 
 [Material Design](https://material.io/)
+
+[Awesome cat icons](https://www.flaticon.com/packs/kitty-avatars-2)
 
 Google, lots and lots of Google
 
