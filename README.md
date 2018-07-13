@@ -14,11 +14,13 @@ Built on _s, a very barebones Wordpress starter theme.
 * Also, creating and adding a template-part
 * Inserting an item within looped posts at a set place. (CTAs on page-cats)
 * Material design system (only the theory and inspiration for buttons but will definitely use the code/elements in a future project).
+* Sometimes ACF does not play ball or how I have spent hours trying to make a query for a filter to work based on a custom field only to realise that for some reason I could not access those columns in the table. Adding a new field magically solved the issue.
 
 ## Still to come
 
 * Pages: Donate, News, Foster, Volunteer, Events, Contact
 * Filters: I'll probably use taxonomies and categories to filter cats, news, volunteer and other listing pages. Custom fields are also an option
+  * Went with custom fields. One is working so far (on master: page-cats.php) the rest and fine tuning is happening on a branch ([catfilters](https://github.com/krisztin/wp-shelter-theme/compare/catfilters))
 
 ## Nice to haves aka massive projects to be done
 
