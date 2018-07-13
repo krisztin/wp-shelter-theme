@@ -27,24 +27,33 @@
 
 	<header id="masthead" class="site-header">
 		<div class="container-wide nav-flex">
+			<!-- site-branding -->
 			<div class="site-branding container-text nav-flex-disp">
 				<?php	the_custom_logo(); ?>
 				<h1><?php bloginfo( 'name' ); ?></h1>
-			</div><!-- .site-branding -->
+			</div>
+			<!-- navigation -->
 			<nav id="site-navigation" class="main-navigation nav-flex-menu">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+				?>
+			</nav>
 		</div>
-			<?php if (is_front_page()) : ?>
+			<?php if (is_front_page()) : while ( have_posts() ) : the_post(); ?>
 				<div class="custom-header-media">
-				<?php the_custom_header_markup(); ?>
-			<?php endif; ?>
+					<div class="container-text cta-header">
+						<h1><?php the_field( 'cta_header_title'); ?></h1>
+						<p><?php the_field( 'cta_header_text'); ?></p>
+						<a href="<?php the_field( 'cta_header_button_link'); ?>" class="btn btn-secondary inverted"><?php the_field( 'cta_header_button_text'); ?></a>
+						<a href="#" class="btn btn-primary inverted">Donate</a>
+					</div>
+					<?php the_custom_header_markup(); ?>
+				</div>
+				<?php endwhile; endif; ?>
 </div>
 	</header><!-- #masthead -->
 
