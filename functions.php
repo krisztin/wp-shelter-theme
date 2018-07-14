@@ -123,6 +123,8 @@ function charity_shelter_scripts() {
 
 	wp_enqueue_script( 'charity_shelter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'stripe-elements' , 'https://js.stripe.com/v3/' );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
