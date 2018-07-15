@@ -20,11 +20,12 @@ Built on _s, a very barebones Wordpress starter theme.
 
 * Pages: Donate, News, Foster, Volunteer, Events, Contact
 * Filters: I'll probably use taxonomies and categories to filter cats, news, volunteer and other listing pages. Custom fields are also an option
-  * Went with custom fields. One is working so far (on master: page-cats.php) the rest and fine tuning is happening on a branch ([catfilters](https://github.com/krisztin/wp-shelter-theme/compare/catfilters))
+  * Went with custom fields. One is working so far (on master: page-cats.php) the rest and fine tuning is happening on a branch ([catfilters](https://github.com/krisztin/wp-shelter-theme/pull/1))
 
 ## Nice to haves aka massive projects to be done
 
 * Stripe integration with all the hooks, actions, bells and whilstles.
+  * [Pull Request](https://github.com/krisztin/wp-shelter-theme/pull/2) - Slooowly getting there, should probably create a form plugin
 * System for recurring donations (GoCardless?).
 * Shop (virtual shop for virtual gifts that could be bought for a cat).
 * Google Tag Manager integration.
