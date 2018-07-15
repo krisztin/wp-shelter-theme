@@ -28,9 +28,8 @@
   </div>
     <!-- Used to display Element errors. -->
   <div id="card-errors" role="alert"></div>
-
   <button class="btn btn-primary">Donate</button>
-  <input type="hidden" name="action" value="donate_form">
+  <input type="hidden" name="action" value="donate_form_response">
 </form>
 </div>
 <script>
