@@ -3,16 +3,26 @@
 
 Built on _s, a very barebones Wordpress starter theme.
 
+## Cats!
+
+![Featured Cat](https://krisztin.github.io/assets/img/wp-shelter-header.png)
+
 ## Things I've learned so far
 
 * Setting up a project with automatic Sass build (with npm and node-sass)
 * Handle permission errors otherwise known as '777 is your last hope'.
 * Create functions i.e. adding thumbnail support, a custom post type, scripts and stylesheets (Google fonts and Font Awesome).
-* Create a custom post type (Cats).
+* Create a custom post type (Cats) with custom fields (with ACF)
+
+![Custom field values displayed](https://krisztin.github.io/assets/img/wp-shelter-acf.png)
 * Renaming a menu item and post type in the backend (Posts -> News).
 * Using WP_Query to display a specific (custom) post/page with a specific custom field value (featured cat template-part)
-* Also, creating and adding a template-part
+
+![Featured Cat](https://krisztin.github.io/assets/img/wp-shelter-featured.png)
+* Creating and adding a template-part (content-featured.php)
 * Inserting an item within looped posts at a set place. (CTAs on page-cats)
+
+![CTA among cat listings](https://krisztin.github.io/assets/img/wp-shelter-cta.png)
 * Material design system (only the theory and inspiration for buttons but will definitely use the code/elements in a future project).
 * Sometimes ACF does not play ball or how I have spent hours trying to make a query for a filter to work based on a custom field only to realise that for some reason I could not access those columns in the table. Adding a new field magically solved the issue.
 
@@ -22,10 +32,12 @@ Built on _s, a very barebones Wordpress starter theme.
 * Filters: I'll probably use taxonomies and categories to filter cats, news, volunteer and other listing pages. Custom fields are also an option
   * Went with custom fields. One is working so far (on master: page-cats.php) the rest and fine tuning is happening on a branch ([catfilters](https://github.com/krisztin/wp-shelter-theme/pull/1))
 
+![Filters. Functional but not very pretty](https://krisztin.github.io/assets/img/wp-shelter-filters.png)
+
 ## Nice to haves aka massive projects to be done
 
 * Stripe integration with all the hooks, actions, bells and whilstles.
-  * [Pull Request](https://github.com/krisztin/wp-shelter-theme/pull/2) - Slooowly getting there, should probably create a form plugin
+  * [Pull Request](https://github.com/krisztin/wp-shelter-theme/pull/2) - Slooowly getting there. Need to create a form plugin to ensure proper POST
 * System for recurring donations (GoCardless?).
 * Shop (virtual shop for virtual gifts that could be bought for a cat).
 * Google Tag Manager integration.
