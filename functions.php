@@ -117,11 +117,13 @@ function charity_shelter_scripts() {
 
 	wp_enqueue_style( 'charity_shelter-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'fontawesome' , 'https://use.fontawesome.com/releases/v5.1.0/css/all.css');
+	wp_enqueue_style( 'fontawesome' , 'https://use.fontawesome.com/releases/v5.1.0/css/all.css' );
 
 	wp_enqueue_script( 'charity_shelter-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'charity_shelter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'stripe-elements' , 'https://js.stripe.com/v3/' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -208,7 +210,7 @@ function charity_shelter_cat_init() {
 
 // changing Post post type to news in the backend
 
-function revcon_change_post_label() {
+function charity_shelter_change_post_label() {
 	global $menu;
 	global $submenu;
 	$menu[5][0] = 'News';
@@ -216,7 +218,7 @@ function revcon_change_post_label() {
 	$submenu['edit.php'][10][0] = 'Add News';
 	$submenu['edit.php'][16][0] = 'News Tags';
 }
-function revcon_change_post_object() {
+function charity_shelter_change_post_object() {
 	global $wp_post_types;
 	$labels = &$wp_post_types['post']->labels;
 	$labels->name = 'News';
@@ -235,8 +237,8 @@ function revcon_change_post_object() {
 	$args->rewrite = array('slug' => 'news');
 }
 
-add_action( 'admin_menu', 'revcon_change_post_label' );
-add_action( 'init', 'revcon_change_post_object' );
+add_action( 'admin_menu', 'charity_shelter_change_post_label' );
+add_action( 'init', 'charity_shelter_change_post_object' );
 
 
 // Catfilter
@@ -295,3 +297,45 @@ function charity_shelter_catfilter_function(){
 
 add_action('wp_ajax_myfilter', 'charity_shelter_catfilter_function'); 
 add_action('wp_ajax_nopriv_myfilter', 'charity_shelter_catfilter_function');
+
+// Donations charge action
+
+function charity_shelter_donate_charge() {
+  require_once('vendor/autoload.php');
+
+  \Stripe\Stripe::setApiKey("sk_test_0oCeLBHOQ4avBosyCiGvAesD");
+
+	// Sanitising post array
+
+	$_POST = filter_var_array($_POST, FILTER_SANITIZE_STRING);
+
+	$first_name = $POST['first_name'];
+	$last_name = $POST['last_name'];
+	$email = $POST['email'];
+	$token = $POST['stripeToken'];
+
+	// Create donor in Stripe
+
+	$donor = \Stripe\donor::create(array(
+		"email" => $email,
+		"source" => $token
+	));
+
+	// Get the payment token ID submitted by the form:
+
+	$charge = \Stripe\Charge::create([
+			'amount' => 999, //make dynamic??
+			'currency' => 'gbp',
+			'description' => 'Donation to Cat Shelter',
+			'donor' => $donor->id,
+			'source' => $token,
+	]);
+
+	// Redirect at success - WILL NEED PAGEID
+	$thankyou = get_permalink( 221 );
+	wp_redirect(  $thankyou . '?tid=' . $charge->id . '&donation=' . $charge->amount);
+	exit;
+}
+
+add_action( 'admin_post_donate_form_response' , 'charity_shelter_donate_charge');
+add_action( 'admin_post_nopriv_donate_form_response' , 'charity_shelter_donate_charge');
